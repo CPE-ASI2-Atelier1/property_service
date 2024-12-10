@@ -32,14 +32,6 @@ public class PropertyServiceApplication   {
         return factory;
     }
 
-	
-//	@EventListener(ApplicationReadyEvent.class)
-//    public void doInitAfterStartup() {
-//        //enable to be in topic mode! to do at start
-//        jmsTemplate.setPubSubDomain(true);
-//    }
-
-
 	public static void main(String[] args) {
 		SpringApplication.run(PropertyServiceApplication.class, args);
 	}

@@ -19,7 +19,8 @@ public class MicroPropertyController  {
     public boolean sendInform(@RequestBody Map<String, String> body) {        
     	Map<String, String> subBody = Map.of(
     	        "url", body.get("url"),
-    	        "id", body.get("id")
+    	        "cardid", body.get("cardid"),
+    	        "userid", body.get("userid")
     	    );
         String busName = body.get("busName");
         propertyService.sendMsg(subBody, busName);

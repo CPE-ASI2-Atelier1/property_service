@@ -40,7 +40,8 @@ public class MicroPropertyListener {
             Float attackValue = result.get("ATTACK");
             
             Map<String, Object> body = new HashMap<>();
-            body.put("id", subBody.get("id"));
+            body.put("userid", subBody.get("userid"));
+            body.put("cardid", subBody.get("cardid"));
             body.put("defense", defenseValue);
             body.put("energy", energyValue);
             body.put("hp", hpValue);
