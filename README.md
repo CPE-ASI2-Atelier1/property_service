@@ -40,4 +40,3 @@ Le fichier de configuration détermine le port 8081 pour l'application et les id
 
 ## 📘 **5. Reste à faire**
 - Connecter les services scheduler et property pour avoir une chaîne fonctionnelle.
-- à la place d'envoyer un json on peut créer un objet personnalisé.
