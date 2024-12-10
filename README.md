@@ -27,7 +27,7 @@ L'architecture repose sur les concepts suivants :
 - **Listener JMS** (`MicroPropertyListener`) qui écoute les **queues ActiveMQ** puis qui envoie l'url à la librairie locale. Les propriétés données par la librairie apès traitement sont envoyées en reqûete POST au scheduler service avec les id user et card.
 
 ## 📘 **3. Fichier de configuration**
-Le fichier de configuration détermine le port 8081 pour l'application et les identifiants pour la queue activeMQ notamment.
+Le fichier de configuration détermine le port 8082 pour l'application et les identifiants pour la queue activeMQ notamment.
 
 ## 📘 **4. Flux de données**
 - **Client** → /card (via POST)
