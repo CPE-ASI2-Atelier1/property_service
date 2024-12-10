@@ -39,4 +39,5 @@ Le fichier de configuration détermine le port 8082 pour l'application et les id
 - **MicroPropertyListener** → Envoi des résultats à l'API distante.
 
 ## 📘 **5. Reste à faire**
-Connecter les services scheduler et property pour avoir un chaîne fonctionnelle.
+- Connecter les services scheduler et property pour avoir une chaîne fonctionnelle.
+- à la place d'envoyer un json on peut créer un objet personnalisé.
