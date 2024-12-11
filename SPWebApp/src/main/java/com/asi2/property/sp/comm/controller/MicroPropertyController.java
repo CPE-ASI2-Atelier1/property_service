@@ -15,7 +15,7 @@ public class MicroPropertyController  {
     @Autowired
     MicroPropertyService propertyService;
     
-    @RequestMapping(method = RequestMethod.POST, value = "/card")
+    @RequestMapping(method = RequestMethod.POST, value = "/properties")
     public boolean sendInform(@RequestBody Map<String, String> body) {        
     	Map<String, String> subBody = Map.of(
     	        "url", body.get("url"),
