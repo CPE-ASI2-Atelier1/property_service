@@ -21,11 +21,9 @@ L'architecture repose sur les concepts suivants :
 - **Contrôleur REST** (`MicroPropertyController`) qui reçoit les requêtes POST avec un body de forme json d'un client externe. Le json est de la forme : 
 {
   "url": "https://example.com/image.png",
-  "busName": "TestBus",
-  "cardid": "2",
-  "userid": "4"
+  "cardid": "2"
 }
-- **Service métier** (`MicroPropertyService`) qui envoie un un sous-ensemble du body d'origine composé de l'url, de la cardid et du userid au **bus ActiveMQ**.
+- **Service métier** (`MicroPropertyService`) qui envoie un un sous-ensemble du body d'origine composé de l'url et de la cardid au **bus ActiveMQ**.
 - **Listener JMS** (`MicroPropertyListener`) qui écoute les **queues ActiveMQ** puis qui envoie l'url à la librairie locale. Les propriétés données par la librairie apès traitement sont envoyées en reqûete POST au scheduler service avec les id user et card.
 
 ## 📘 **3. Fichier de configuration**
@@ -40,4 +38,3 @@ Le fichier de configuration détermine le port 8082 pour l'application et les id
 
 ## 📘 **5. Reste à faire**
 - Connecter les services scheduler et property pour avoir une chaîne fonctionnelle.
-- à la place d'envoyer un json on peut créer un objet personnalisé.
