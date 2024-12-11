@@ -19,10 +19,10 @@ public class MicroPropertyController  {
     public boolean sendInform(@RequestBody Map<String, String> body) {        
     	Map<String, String> subBody = Map.of(
     	        "url", body.get("url"),
-    	        "cardid", body.get("cardid"),
-    	        "userid", body.get("userid")
+    	        "cardid", body.get("cardid")
     	    );
-        String busName = body.get("busName");
+    	//defaut busname
+        String busName = "PropertyImageUrls";
         propertyService.sendMsg(subBody, busName);
         return true;
     }
