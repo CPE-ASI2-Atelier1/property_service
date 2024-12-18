@@ -3,6 +3,7 @@ package com.asi2.property.sp.comm.controller;
 import java.util.Map;
 import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
@@ -15,7 +16,9 @@ import org.springframework.web.client.RestTemplate;
 public class MicroPropertyListener {
 	@Autowired
     JmsTemplate jmsTemplate;
-	 private final String apiUrl = "http://localhost:8081"; // TODO get from env file
+
+    @Value("${scheduler.service.url}")
+	 private String apiUrl;
 
     @JmsListener(destination = "PropertyImageUrls", containerFactory = "connectionFactory")
     public void receiveMessage(Map<String, String> subBody, Message message) {

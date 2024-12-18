@@ -10,6 +10,7 @@ FROM eclipse-temurin:21-alpine
 WORKDIR /usr/app
 ARG ACTIVEMQ_HOST=localhost
 ENV ACTIVEMQ_HOST=${ACTIVEMQ_HOST}
+ENV SERVER_ADDRESS="0.0.0.0"
 COPY --from=build /usr/app/target/*.jar app.jar
 EXPOSE 8082
 ENTRYPOINT java -jar app.jar
