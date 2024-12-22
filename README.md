@@ -6,7 +6,6 @@
 
 3. [Fichier de configuration](#3-fichier-de-configuration)
 4. [Flux de données](#4-flux-de-données)
-5. [Reste à faire](#5-reste-à-faire)
 
 ---
 
@@ -35,6 +34,3 @@ Le fichier de configuration détermine le port 8082 pour l'application et les id
 - **ActiveMQ** → Message intercepté par MicroPropertyListener.
 - **MicroPropertyListener** → Transformation de l'image via ImgToProperties.
 - **MicroPropertyListener** → Envoi des résultats à l'API distante.
-
-## 📘 **5. Reste à faire**
-- Connecter les services scheduler et property pour avoir une chaîne fonctionnelle.
